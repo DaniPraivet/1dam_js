@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Mi primera web</h1>
+<p>Mi primer párrafo</p>
+
+<p id="prueba1"></p>
+<button onclick="pruebaN1()">Prueba Inner</button>
+
+<button onclick="pruebaN2()">Prueba DocumentWrite</button>
+
+<button onclick="pruebaN3()">Prueba WindowAlert</button>
+
+<button onclick="pruebaN4()">Prueba ConsoleLog</button>
+
+<script>
+function pruebaN1(){
+	document.getElementById("prueba1").innerHTML = "<h2>Hola mundo</h2>";
+}
+function pruebaN2() {
+	document.write("Hola profe, así funciona `document.write`");
+}
+function pruebaN3() {
+	alert("Esto es una prueba con `window.alert`, se puede omitir el apartado de `window`, si deseamos, y seguirá funcionando.");
+}
+function pruebaN4() {
+	console.log("Esto es una prueba con `console.log`")
+}
+</script>
+
+</body>
+</html>

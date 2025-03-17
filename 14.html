@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Bucle FOR</title>
+	<script>
+		var longitud_array =parseInt(prompt("¿Cuántas marcas de coches quieres introducir?"));
+		var coches = new Array(longitud_array);
+		
+		for (let i = 0; i < coches.length; i++) {
+			coches[i] = prompt("Dime una marca de coche en la posición " + i);
+		}
+		document.open();
+		for (let i = 0; i < coches.length; i++) {
+			document.write("Se ha introducido la marca " + coches[i] + ", en la posición " + i + "<br>");
+		}
+		
+		document.write("<button onclick=rellenarTabla()>Crear una tabla</button><br>");
+		document.close();
+		
+		
+		function rellenarTabla() {
+			var longitud_tabla = parseInt(prompt("¿Cuántos coches quieres añadir por marca?"));
+			var arrayCoches = new Array(longitud_tabla);
+			document.open();
+			document.write("<p>Tabla de los coches</p>" + "<br>");
+			document.write("<table border=1>");
+			document.write("<tr>");
+			for (let i = 0; i < coches.length; i++) {
+			document.write("<td>" + coches[i] + "</td>");
+			}
+			document.write("</tr>");
+			for (let i = 0; i < longitud_tabla; i++) {
+				document.write("<tr>");
+				for (let i = 0; i < longitud_array; i++) {
+					arrayCoches[i] = prompt("Dime un coche para la marca "  + coches[i]);
+					document.write("<td>" + arrayCoches[i] + "</td>");
+				}
+				document.write("</tr>");
+			}
+			document.write("</table>");
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
