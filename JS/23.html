@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Ejercicio Tablas de Multiplicar</title>
+		<script>
+			var numeroUsuario = parseInt(prompt("Dime que número quieres generar la tabla de multiplicar: "));
+			document.open();
+			var texto;
+			if (numeroUsuario > 0) {
+				texto = "<h1>TABLA DE MULTIPLICAR</h1> <br><br> <table border=1><tr><th>Numero</th><th>Factor</th><th>Resultado</th></tr>";
+				for (let i = 1; i <= 10; i++) {
+					let resultado = numeroUsuario * i;
+					texto += "<tr><td>"+numeroUsuario+"</td><td>"+i+"</td><td>"+resultado+"</td></tr>";
+				}
+				texto +="</table>";
+				
+				texto +='<br> <button onclick="cambiarDatos()">Cambiar los datos</button>';
+			} else {
+				texto = "<h2>No introduzcas números negativos</h2>"
+			}
+			document.write(texto);
+			
+			function cambiarDatos() {
+			var numeroUsuario = parseInt(prompt("Dime que número quieres generar la tabla de multiplicar: "));
+			document.open();
+			var texto;
+			if (numeroUsuario > 0) {
+				texto = "<h1>TABLA DE MULTIPLICAR</h1> <br><br> <table border=1><tr><th>Numero</th><th>Factor</th><th>Resultado</th></tr>";
+				for (let i = 1; i <= 10; i++) {
+					let resultado = numeroUsuario * i;
+					texto += "<tr><td>"+numeroUsuario+"</td><td>"+i+"</td><td>"+resultado+"</td></tr>";
+				}
+				texto +="</table>";
+				
+				texto +='<br> <button onclick="cambiarDatos()">Cambiar los datos</button>';
+			} else {
+				texto = "<h2>No introduzcas números negativos</h2>"
+			}
+			document.write(texto);
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

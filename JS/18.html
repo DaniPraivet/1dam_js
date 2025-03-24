@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Bucle FOR EACH</title>
+	<script>
+		var numeros = new Array(9);	
+		
+		for (let i = 0; i < numeros.length; i++) {
+			numeros[i] = Math.floor(Math.random() * 11);
+		}
+		let texto = "";
+		numeros.forEach(miFuncion);
+		
+		function miFuncion(valor) {
+			texto += valor + "<br>";
+		}
+		document.write(texto);
+	</script>
+</head>
+<body>
+	
+</html>
+</body>

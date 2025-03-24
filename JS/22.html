@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CONTINUE</title>
+	<script>
+		let texto = "";
+		
+		var jugadores = ['Daniel', 'Andrés', 'Álvaro', 'Javi', 'Samuel', 'Miguel', 'Alexi'];
+		for (let i = 0; i < jugadores.length ; i++) {
+			if (jugadores[i] === 'Javi') {continue;}
+			
+			texto += "<br> Jugador " + jugadores[i] + " en posición " + i;
+		}
+		document.write(texto);
+	</script>
+</head>
+<body>
+	
+</html>
+</body>
